@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs') %>
+
+    <form action="/" method="post">
+        <input type="text" name="task" id="task">
+        <input type="submit" value="+">
+    </form>
+
+    <ul>
+        <% if (locals.taskList) { %>
+            <% locals.taskList.forEach(task => { %>
+                <li> <%= task %> </li>
+            <% }); %>
+        <% } %>
+    </ul>
+
+<%- include('partials/footer.ejs') %>
